@@ -1,0 +1,61 @@
+@use "./../config/variables" as v;
+@use "./../common" as c;
+
+.course__point {
+    .point__thumb {
+        @include v.bg;
+        width: 57.7%;
+        padding-top: 35.25%;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+    .point__content {
+        padding-top: 7rem;
+        width: 36%;
+        h2 {
+            color: #214F6A;
+            margin-bottom: 4rem;
+            span {
+                font-size: clamp(15px, 0.955rem + 2.73vw, 3rem);
+                display: block;
+                font-family: futura-pt, sans-serif;
+                font-weight: 600;
+                font-style: normal;
+            }
+            strong {
+                display: block;
+                font-size: clamp(30px, 1.909rem + 5.45vw, 6rem);
+                line-height: 1.5em;
+                letter-spacing: 0.2em;
+            }
+        }
+        p {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 2;
+        }
+    }
+    .flex {
+        align-items: flex-start;
+    }
+    .left__container {
+        width: 84.375%;
+        margin-right: auto;
+        margin-bottom: 23rem;
+    }
+    .right__container {
+        margin-bottom: 23rem;
+        width: 84.375%;
+        margin-left: auto;
+        .point__thumb {
+            order: 2;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+        }
+        .point__content {
+            order: 1;
+        }
+    }
+}

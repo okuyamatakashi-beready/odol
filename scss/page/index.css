@@ -1,0 +1,409 @@
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .flex {
+    flex-wrap: wrap;
+  }
+}
+
+.min_container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.container {
+  min-width: 1020px;
+  margin: 0 auto;
+  width: 71.875%;
+}
+
+.smallest_container {
+  width: 640px;
+  margin: 0 auto;
+}
+
+br.sp {
+  display: none;
+}
+
+br.pc {
+  display: block;
+}
+
+.pc {
+  display: block;
+}
+
+.sp {
+  display: none;
+}
+
+.non_image {
+  background-image: url(../images/common/non_image.jpg);
+}
+
+.flex--start {
+  justify-content: flex-start;
+}
+
+.transition {
+  transition: 0.3s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+/*-------------------------
+    header
+-------------------------*/
+.header_include {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+  width: 100%;
+}
+
+#header {
+  width: 100%;
+}
+#header .flex {
+  justify-content: space-between;
+}
+#header a.logo {
+  width: 12%;
+  min-width: 120px;
+  top: 6rem;
+  left: 8rem;
+  position: relative;
+}
+#header a.logo img {
+  width: 100%;
+}
+#header .header__toggle {
+  width: 22.7%;
+  min-width: 210px;
+}
+#header .header__toggle a.header__toggle--contact {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(./../images/common/header_contact-bg.jpg);
+  width: 60%;
+  padding: 2rem 0;
+  color: #fff;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  max-width: 266px;
+}
+#header .header__toggle a.header__toggle--contact p {
+  text-align: center;
+  font-size: clamp(20px, 1.273rem + 3.64vw, 4rem);
+  font-family: "brandon";
+}
+#header .header__toggle a.header__toggle--contact p span {
+  display: block;
+  font-weight: bold;
+  font-size: clamp(12px, 1.018rem + 0.91vw, 1.7rem);
+  font-family: "dnp-shuei-gothic-gin-std";
+}
+#header .header__toggle #toggle {
+  background-color: #000;
+  width: 27%;
+  max-width: 120px;
+  cursor: pointer;
+  border-bottom-left-radius: 30px;
+}
+#header .header__toggle #toggle div {
+  position: relative;
+  top: 40%;
+  height: 23px;
+  bottom: 0;
+  margin: auto;
+}
+#header .header__toggle #toggle div span {
+  width: 42%;
+  background-color: #fff;
+  display: block;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+#header .header__toggle #toggle div span:nth-of-type(1) {
+  transform: translateY(0px);
+}
+#header .header__toggle #toggle div span:nth-of-type(2) {
+  transform: translateY(15px);
+}
+
+/*-------------------------
+    gnav
+-------------------------*/
+#gnav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #DDDDDD;
+  width: 21.6%;
+  padding-top: 5.2rem;
+  padding-right: 3.4rem;
+  padding-left: 6.9rem;
+  padding-bottom: 8.3rem;
+  border-bottom-left-radius: 50px;
+  transform: translateX(100%);
+  transition: 0.4s cubic-bezier(0.45, 0, 0.55, 1);
+}
+#gnav .nav__container {
+  padding-top: 8rem;
+}
+#gnav .nav__container ul.navigation li {
+  margin-bottom: 3rem;
+  transition: 0.8s ease;
+  transform: translateX(40px);
+}
+#gnav .nav__container ul.navigation li:nth-child(1) {
+  transition-delay: 0.1s;
+}
+#gnav .nav__container ul.navigation li:nth-child(2) {
+  transition-delay: 0.2s;
+}
+#gnav .nav__container ul.navigation li:nth-child(3) {
+  transition-delay: 0.3s;
+}
+#gnav .nav__container ul.navigation li:nth-child(4) {
+  transition-delay: 0.4s;
+}
+#gnav .nav__container ul.navigation li:nth-child(5) {
+  transition-delay: 0.5s;
+}
+#gnav .nav__container ul.navigation li a {
+  color: #000;
+}
+#gnav .nav__container ul.navigation li a p {
+  font-family: "Montserrat";
+  font-size: clamp(28px, 2.364rem + 2.18vw, 4rem);
+  font-weight: 500;
+}
+#gnav .nav__container ul.navigation li a p.flex {
+  justify-content: flex-start;
+}
+#gnav .nav__container ul.navigation li a p.flex img {
+  width: 8.6%;
+  padding-left: 1.5rem;
+}
+#gnav .nav__container ul.navigation li a span {
+  font-size: clamp(12px, 1.055rem + 0.73vw, 1.6rem);
+}
+#gnav .nav__container ul.gnav__sns {
+  width: 38.6%;
+  padding-top: 2rem;
+  transition: 0.8s ease;
+  transform: translateX(40px);
+  transition-delay: 0.6s;
+}
+#gnav .nav__container ul.gnav__sns li img {
+  width: 80%;
+}
+#gnav .nav__container a.gnav__contact--btn {
+  width: 80%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(./../images/common/gnav_common_bg.jpg);
+  border-radius: 20px;
+  display: block;
+  padding: 2.3rem 0 2rem 0;
+  color: #fff;
+  text-align: center;
+  margin-top: 5.6rem;
+  transition: 1.4s ease;
+  transform: translateX(40px);
+  transition-delay: 0.3s;
+}
+#gnav .nav__container a.gnav__contact--btn p {
+  font-family: "Montserrat";
+  font-size: clamp(28px, 2.364rem + 2.18vw, 4rem);
+}
+#gnav .nav__container a.gnav__contact--btn span {
+  font-size: clamp(12px, 1.018rem + 0.91vw, 1.7rem);
+}
+#gnav #gnav__toggle {
+  position: absolute;
+  top: 5rem;
+  right: 3.4rem;
+  cursor: pointer;
+  height: 30px;
+}
+#gnav #gnav__toggle div {
+  position: relative;
+}
+#gnav #gnav__toggle div span {
+  width: 50px;
+  height: 2px;
+  background-color: #000;
+  transform: translateY(10px) rotate(25deg);
+  display: block;
+}
+#gnav #gnav__toggle div span:nth-of-type(2) {
+  transform: translateY(8px) rotate(-25deg);
+}
+
+.open #gnav {
+  transform: translateX(0%);
+}
+.open #gnav ul.navigation li {
+  transform: translateX(0);
+}
+.open #gnav ul.gnav__sns {
+  transform: translateX(0%);
+}
+.open #gnav a.gnav__contact--btn {
+  transform: translateX(0%);
+}
+
+@media screen and (max-width: 768px) {
+  .pc {
+    display: none !important;
+  }
+  .sp {
+    display: block !important;
+  }
+  .container {
+    min-width: 1px;
+    width: 84%;
+  }
+  .order_1 {
+    order: 2;
+  }
+  .order_2 {
+    order: 1;
+  }
+  br.sp {
+    display: block;
+  }
+  a.common_btn {
+    margin: auto;
+  }
+  .smallest_container {
+    width: 89%;
+  }
+  .slick-next {
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/common/point_next.svg) !important;
+    background-size: contain;
+  }
+  .slick-next:before {
+    content: "";
+  }
+  .slick-prev {
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/common/point_prev.svg) !important;
+    background-size: contain;
+  }
+  .slick-prev:before {
+    content: "";
+  }
+}
+/*-------------------------
+    footer
+-------------------------*/
+#footer {
+  padding-top: 10rem;
+  padding-bottom: 6.5rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(./../images/common/footer_bg.jpg);
+}
+#footer a.footer__logo {
+  width: 17%;
+  display: block;
+  margin: auto;
+}
+#footer a.footer__logo img {
+  width: 100%;
+}
+#footer ul {
+  width: 118px;
+  margin-top: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+#footer ul li img {
+  width: 100%;
+}
+#footer ul li :nth-child(1) {
+  width: 22px;
+}
+#footer ul li :nth-child(2) {
+  width: 20px;
+}
+#footer ul li :nth-child(1) {
+  width: 26px;
+}
+#footer ul li :nth-child(1) {
+  width: 20px;
+}
+
+.course__point .point__thumb {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 57.7%;
+  padding-top: 35.25%;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.course__point .point__content {
+  padding-top: 7rem;
+  width: 36%;
+}
+.course__point .point__content h2 {
+  color: #214F6A;
+  margin-bottom: 4rem;
+}
+.course__point .point__content h2 span {
+  font-size: clamp(15px, 0.955rem + 2.73vw, 3rem);
+  display: block;
+  font-family: futura-pt, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.course__point .point__content h2 strong {
+  display: block;
+  font-size: clamp(30px, 1.909rem + 5.45vw, 6rem);
+  line-height: 1.5em;
+  letter-spacing: 0.2em;
+}
+.course__point .point__content p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2;
+}
+.course__point .flex {
+  align-items: flex-start;
+}
+.course__point .left__container {
+  width: 84.375%;
+  margin-right: auto;
+  margin-bottom: 23rem;
+}
+.course__point .right__container {
+  margin-bottom: 23rem;
+  width: 84.375%;
+  margin-left: auto;
+}
+.course__point .right__container .point__thumb {
+  order: 2;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+.course__point .right__container .point__content {
+  order: 1;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+	<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		
+		
+		<title>ODOL オドルキカク</title>
+
+
+		<!-- CSS -->
+		<link href="/style.css" rel="stylesheet" type="text/css">
+		<link href="/scss/main.css" rel="stylesheet" type="text/css">
+		<link href="/scss/slick-theme.css" rel="stylesheet" type="text/css">
+		<link href="/scss/slick.css" rel="stylesheet" type="text/css">
+		<link rel="icon" href="/images/common/favicon.ico" id="favicon">
+		<link id="page-specific-stylesheet" rel="stylesheet" href="">
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				var stylesheet = document.getElementById('page-specific-stylesheet');
+				var path = window.location.pathname;
+	
+				if (path.includes('index') || path === '/') {
+					stylesheet.href = '/scss/main.css';
+				} else if (path.includes('company')) {
+					stylesheet.href = '/scss/company/index.css';
+				} else if (path.includes('courses')) {
+					stylesheet.href = 'styles/courses.css';
+				} else {
+					stylesheet.href = 'styles/default.css'; // デフォルトのスタイルシート
+				}
+			});
+		</script>
+
+		
+
+	</head>
+<body>
+	<div include-html="header.html"></div>
+	<main>
+		<p>hogehoge</p>
+	</main>
+	
+
+</body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="/js/infiniteslidev2.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+<script src="/js/index.js"></script>
+</html>
