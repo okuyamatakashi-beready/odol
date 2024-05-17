@@ -264,6 +264,132 @@ br.pc {
   transform: translateX(0%);
 }
 
+/*-------------------------
+    ローディング
+-------------------------*/
+#splash {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 9999999;
+  text-align: center;
+  color: #fff;
+}
+
+#splash-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+}
+
+/*========= 画面遷移のためのCSS ===============*/
+body {
+  background: #fff; /*遷移アニメーションと同じ色を指定*/
+}
+
+body.appear {
+  background: #fff; /*画面を開いた後の背景色を指定*/
+}
+
+/*画面遷移アニメーション*/
+.splashbg1,
+.splashbg2 {
+  display: none;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg1,
+body.appear .splashbg2 {
+  display: block;
+}
+
+/*右に消えるエリア*/
+body.appear .splashbg1 {
+  animation-name: PageAnime;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  content: "";
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 50%;
+  transform: scaleX(1);
+  background-color: #fff; /*伸びる背景色の設定*/
+}
+
+@keyframes PageAnime {
+  0% {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  50% {
+    transform-origin: right;
+  }
+  100% {
+    transform-origin: right;
+    transform: scaleX(0);
+  }
+}
+/*左に消えるエリア*/
+body.appear .splashbg2 {
+  animation-name: PageAnime2;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  content: "";
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  right: 50%;
+  transform: scaleX(1);
+  background-color: #fff; /*伸びる背景色の設定*/
+}
+
+@keyframes PageAnime2 {
+  0% {
+    transform-origin: right;
+    transform: scaleX(1);
+  }
+  50% {
+    transform-origin: left;
+  }
+  100% {
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+}
+/*画面遷移の後現れるコンテンツ設定*/
+main, header, footer {
+  opacity: 0; /*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear main,
+body.appear header,
+body.appear footer {
+  animation-name: PageAnimeAppear;
+  animation-duration: 1s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes PageAnimeAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media screen and (max-width: 768px) {
   .pc {
     display: none !important;
@@ -448,13 +574,25 @@ br.pc {
 #mv .mv__inner .mv__inner--catch .catch__content--right {
   background-image: url(./../images/top/catch__content--right.jpg);
   padding-top: 2.5rem;
+  transform: scaleX(0);
+  overflow: hidden;
+  transition: 1s 1s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 #mv .mv__inner .mv__inner--catch .catch__content--right img {
   width: 60%;
+  transition: 1s 2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: translateX(-140%);
 }
 #mv .mv__inner .mv__inner--catch .catch__content--left {
   background-image: url(./../images/top/catch__content--left.jpg);
   padding-top: 3.5rem;
+  transform: scaleX(0);
+  overflow: hidden;
+  transition: 1s 2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+#mv .mv__inner .mv__inner--catch .catch__content--left img {
+  transition: 1s 3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: translateX(-140%);
 }
 #mv .mv__inner ul.mv__inner--float {
   width: 100%;
@@ -462,6 +600,25 @@ br.pc {
 }
 #mv .mv__inner ul.mv__inner--float li {
   position: absolute;
+  transform: scale(4);
+  filter: blur(20px);
+  animation: floatAnimation 6s forwards;
+  animation-delay: 2.5s;
+  animation-timing-function: linear;
+}
+@keyframes floatAnimation {
+  0% {
+    transform: scale(3);
+    filter: blur(20px);
+  }
+  50% {
+    filter: blur(0px);
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+    filter: blur(0px);
+  }
 }
 #mv .mv__inner ul.mv__inner--float li img {
   width: 100%;
@@ -470,26 +627,46 @@ br.pc {
   top: 31rem;
   right: 28.2rem;
   width: 27.24%;
+  animation-delay: 2.5s;
 }
 #mv .mv__inner ul.mv__inner--float li:nth-child(2) {
   top: 36.8rem;
   left: 28.1rem;
   width: 29.4%;
+  animation-delay: 3s;
 }
 #mv .mv__inner ul.mv__inner--float li:nth-child(3) {
   top: 56.5rem;
   right: 28.6rem;
   width: 24.25%;
+  animation-delay: 3.5s;
 }
 #mv .mv__inner ul.mv__inner--float li:nth-child(4) {
   top: 62.5rem;
   left: 9.4rem;
   width: 32.31%;
+  animation-delay: 4s;
 }
 #mv .mv__inner ul.mv__inner--float li:nth-child(5) {
   top: 88.4rem;
   left: 28.4rem;
   width: 26.66%;
+  animation-delay: 4.5s;
+}
+
+.appear #mv .mv__inner .mv__inner--catch .catch__content--right {
+  transform: scaleX(1);
+}
+.appear #mv .mv__inner .mv__inner--catch .catch__content--right img {
+  width: 60%;
+  transform: translateX(0%);
+}
+.appear #mv .mv__inner .mv__inner--catch .catch__content--left {
+  transform: scaleX(1);
+}
+.appear #mv .mv__inner .mv__inner--catch .catch__content--left img {
+  width: 60%;
+  transform: translateX(0%);
 }
 
 /*-------------------------
