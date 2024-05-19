@@ -81,9 +81,22 @@ br.pc {
 #header a.logo img {
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  #header a.logo {
+    width: 26%;
+    min-width: 1px;
+    top: 10px;
+    left: 20px;
+  }
+}
 #header .header__toggle {
   width: 22.7%;
   min-width: 210px;
+}
+@media screen and (max-width: 768px) {
+  #header .header__toggle .flex {
+    justify-content: flex-end;
+  }
 }
 #header .header__toggle a.header__toggle--contact {
   background-position: center center;
@@ -108,6 +121,11 @@ br.pc {
   font-size: clamp(12px, 1.018rem + 0.91vw, 1.7rem);
   font-family: "dnp-shuei-gothic-gin-std";
 }
+@media screen and (max-width: 768px) {
+  #header .header__toggle a.header__toggle--contact {
+    display: none;
+  }
+}
 #header .header__toggle #toggle {
   background-color: #000;
   width: 27%;
@@ -115,12 +133,24 @@ br.pc {
   cursor: pointer;
   border-bottom-left-radius: 30px;
 }
+@media screen and (max-width: 768px) {
+  #header .header__toggle #toggle {
+    width: 73px;
+    padding: 9px 0;
+  }
+}
 #header .header__toggle #toggle div {
   position: relative;
   top: 40%;
   height: 23px;
   bottom: 0;
   margin: auto;
+}
+@media screen and (max-width: 768px) {
+  #header .header__toggle #toggle div {
+    top: 35%;
+    right: -3px;
+  }
 }
 #header .header__toggle #toggle div span {
   width: 42%;
@@ -137,6 +167,11 @@ br.pc {
 }
 #header .header__toggle #toggle div span:nth-of-type(2) {
   transform: translateY(15px);
+}
+@media screen and (max-width: 768px) {
+  #header .header__toggle #toggle div span:nth-of-type(2) {
+    transform: translateY(11px);
+  }
 }
 
 /*-------------------------
@@ -399,7 +434,7 @@ body.appear footer {
   }
   .container {
     min-width: 1px;
-    width: 84%;
+    width: 89.3%;
   }
   .order_1 {
     order: 2;
@@ -488,13 +523,33 @@ body.appear footer {
   padding-top: 9.4rem;
   z-index: 50;
 }
+@media screen and (max-width: 768px) {
+  #mv .mv__slider {
+    padding-top: 150px;
+  }
+}
 #mv .mv__slider .mv__slider--slide {
   border-radius: 50%;
+}
+@media screen and (max-width: 768px) {
+  #mv .mv__slider .mv__slider--slide {
+    text-align: center;
+  }
 }
 #mv .mv__slider .mv__slider--slide img {
   width: 100%;
   -webkit-clip-path: ellipse(60% 50% at 50% 50%);
           clip-path: ellipse(60% 50% at 50% 50%);
+}
+@media screen and (max-width: 768px) {
+  #mv .mv__slider .mv__slider--slide img {
+    width: 260%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    -webkit-clip-path: circle();
+            clip-path: circle();
+  }
 }
 #mv .mv__float {
   position: absolute;
@@ -513,11 +568,25 @@ body.appear footer {
   top: 4rem;
   width: 22vw;
 }
+@media screen and (max-width: 768px) {
+  #mv .mv__float.mv__float--before img:nth-of-type(1) {
+    width: 55vw;
+    top: -50px;
+    right: -9%;
+  }
+}
 #mv .mv__float.mv__float--before img:nth-of-type(2) {
   position: absolute;
   left: 21rem;
   top: 7rem;
   width: 25vw;
+}
+@media screen and (max-width: 768px) {
+  #mv .mv__float.mv__float--before img:nth-of-type(2) {
+    width: 50vw;
+    top: 100px;
+    left: -20px;
+  }
 }
 #mv .mv__float.mv__float--after {
   top: 0;
@@ -531,11 +600,23 @@ body.appear footer {
   top: 87.6rem;
   width: 37.6vw;
 }
+@media screen and (max-width: 768px) {
+  #mv .mv__float.mv__float--after img:nth-of-type(1) {
+    width: 76.8vw;
+    top: 197vw;
+  }
+}
 #mv .mv__float.mv__float--after img:nth-of-type(2) {
   position: absolute;
   left: -1%;
   top: 70rem;
   width: 12.8vw;
+}
+@media screen and (max-width: 768px) {
+  #mv .mv__float.mv__float--after img:nth-of-type(2) {
+    width: 28.4vw;
+    top: 125vw;
+  }
 }
 #mv .mv__inner {
   width: 100%;
@@ -552,6 +633,12 @@ body.appear footer {
   right: 0;
   z-index: 30;
   margin: auto;
+}
+@media screen and (max-width: 768px) {
+  #mv .mv__inner .mv__inner--catch {
+    width: 106px;
+    min-width: 1px;
+  }
 }
 #mv .mv__inner .mv__inner--catch .flex {
   align-items: flex-start;
@@ -583,6 +670,11 @@ body.appear footer {
   transition: 1s 2s cubic-bezier(0.215, 0.61, 0.355, 1);
   transform: translateX(-140%);
 }
+@media screen and (max-width: 768px) {
+  #mv .mv__inner .mv__inner--catch .catch__content--right {
+    width: 43px;
+  }
+}
 #mv .mv__inner .mv__inner--catch .catch__content--left {
   background-image: url(./../images/top/catch__content--left.jpg);
   padding-top: 3.5rem;
@@ -593,6 +685,11 @@ body.appear footer {
 #mv .mv__inner .mv__inner--catch .catch__content--left img {
   transition: 1s 3s cubic-bezier(0.215, 0.61, 0.355, 1);
   transform: translateX(-140%);
+}
+@media screen and (max-width: 768px) {
+  #mv .mv__inner .mv__inner--catch .catch__content--left {
+    width: 43px;
+  }
 }
 #mv .mv__inner ul.mv__inner--float {
   width: 100%;
@@ -629,11 +726,26 @@ body.appear footer {
   width: 27.24%;
   animation-delay: 2.5s;
 }
+@media screen and (max-width: 768px) {
+  #mv .mv__inner ul.mv__inner--float li:nth-child(1) {
+    width: 74%;
+    top: 120vw;
+    right: 0;
+  }
+}
 #mv .mv__inner ul.mv__inner--float li:nth-child(2) {
   top: 36.8rem;
   left: 28.1rem;
   width: 29.4%;
   animation-delay: 3s;
+}
+@media screen and (max-width: 768px) {
+  #mv .mv__inner ul.mv__inner--float li:nth-child(2) {
+    width: 45.3vw;
+    top: 70vw;
+    right: 0;
+    left: auto;
+  }
 }
 #mv .mv__inner ul.mv__inner--float li:nth-child(3) {
   top: 56.5rem;
@@ -641,17 +753,40 @@ body.appear footer {
   width: 24.25%;
   animation-delay: 3.5s;
 }
+@media screen and (max-width: 768px) {
+  #mv .mv__inner ul.mv__inner--float li:nth-child(3) {
+    width: 48.4vw;
+    left: 0;
+    right: auto;
+    top: 140vw;
+  }
+}
 #mv .mv__inner ul.mv__inner--float li:nth-child(4) {
   top: 62.5rem;
   left: 9.4rem;
   width: 32.31%;
   animation-delay: 4s;
 }
+@media screen and (max-width: 768px) {
+  #mv .mv__inner ul.mv__inner--float li:nth-child(4) {
+    width: 76vw;
+    top: 100vw;
+    left: 0;
+  }
+}
 #mv .mv__inner ul.mv__inner--float li:nth-child(5) {
   top: 88.4rem;
   left: 28.4rem;
   width: 26.66%;
   animation-delay: 4.5s;
+}
+@media screen and (max-width: 768px) {
+  #mv .mv__inner ul.mv__inner--float li:nth-child(5) {
+    width: 66vw;
+    right: 0;
+    left: auto;
+    top: 177vw;
+  }
 }
 
 .appear #mv .mv__inner .mv__inner--catch .catch__content--right {
@@ -676,11 +811,22 @@ body.appear footer {
   padding-top: 17.5rem;
   padding-bottom: 24.6rem;
 }
+@media screen and (max-width: 768px) {
+  .kokoroororu {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+}
 .kokoroororu .container .flex {
   align-items: flex-start;
 }
 .kokoroororu .container .flex .kokoro__ttl {
   width: 42.028%;
+}
+@media screen and (max-width: 768px) {
+  .kokoroororu .container .flex .kokoro__ttl {
+    text-align: center;
+  }
 }
 .kokoroororu .container .flex .kokoro__ttl strong {
   display: inline-block;
@@ -694,6 +840,19 @@ body.appear footer {
   padding-left: 2.8rem;
   box-sizing: border-box;
 }
+@media screen and (max-width: 768px) {
+  .kokoroororu .container .flex .kokoro__ttl {
+    width: 100%;
+  }
+  .kokoroororu .container .flex .kokoro__ttl strong {
+    font-size: 30px;
+    text-align: center;
+    line-height: 1.66;
+    padding-top: 8px;
+    padding-left: 20px;
+    padding-right: 25px;
+  }
+}
 .kokoroororu .container .flex .kokoro__text {
   width: 57.9%;
 }
@@ -701,6 +860,16 @@ body.appear footer {
   font-size: clamp(17px, 1.445rem + 1.27vw, 2.4rem);
   line-height: 2em;
   font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .kokoroororu .container .flex .kokoro__text {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .kokoroororu .container .flex .kokoro__text p {
+    text-align: center;
+    font-size: 14px;
+  }
 }
 
 /*-------------------------
@@ -713,6 +882,12 @@ body.appear footer {
 #infinite__slider .infinite__slider--slide img {
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  #infinite__slider .infinite__slider--slide {
+    width: 210px;
+    margin-right: 6px;
+  }
+}
 
 /*-------------------------
     オドルキカクページリンク
@@ -720,6 +895,12 @@ body.appear footer {
 .odolu__pagelink {
   padding-top: 12.7rem;
   padding-bottom: 20rem;
+}
+@media screen and (max-width: 768px) {
+  .odolu__pagelink {
+    padding-top: 100px;
+    padding-bottom: 0;
+  }
 }
 .odolu__pagelink .container ul {
   flex-wrap: wrap;
@@ -767,12 +948,50 @@ body.appear footer {
   margin-right: 0;
   margin-left: auto;
 }
+@media screen and (max-width: 768px) {
+  .odolu__pagelink .container ul li {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 30px;
+  }
+  .odolu__pagelink .container ul li a {
+    padding-top: 90px;
+    padding-bottom: 50px;
+  }
+  .odolu__pagelink .container ul li a p {
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+  .odolu__pagelink .container ul li a .flex span {
+    font-size: 14px;
+  }
+  .odolu__pagelink .container ul li a .flex img {
+    width: 19px;
+  }
+}
 
 /*-------------------------
     note
 -------------------------*/
 #note {
   padding-bottom: 11rem;
+}
+@media screen and (max-width: 768px) {
+  #note {
+    margin-top: 100px;
+    position: relative;
+    padding-bottom: 100px;
+  }
+  #note::before {
+    content: "";
+    display: block;
+    width: 30vw;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    left: 0;
+    top: 14px;
+  }
 }
 #note h2 {
   margin-bottom: 9rem;
@@ -783,6 +1002,18 @@ body.appear footer {
 }
 #note h2 small {
   font-size: clamp(12px, 1.055rem + 0.73vw, 1.6rem);
+}
+@media screen and (max-width: 768px) {
+  #note h2 span {
+    font-size: 20px;
+    text-align: right;
+    display: block;
+  }
+  #note h2 small {
+    font-size: 12px;
+    text-align: right;
+    display: block;
+  }
 }
 #note ul {
   flex-wrap: wrap;
@@ -826,6 +1057,24 @@ body.appear footer {
   right: 3rem;
   width: 6%;
 }
+@media screen and (max-width: 768px) {
+  #note ul li {
+    width: 46%;
+    margin-bottom: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  #note ul li h3 {
+    font-size: 12px;
+    padding: 15px;
+  }
+  #note ul li p {
+    font-size: 10px;
+    padding-left: 15px;
+  }
+  #note ul li .note__inner img {
+    width: 15px;
+  }
+}
 #note a.note__btn {
   display: block;
   width: 29.63%;
@@ -858,6 +1107,16 @@ body.appear footer {
 }
 #note a.note__btn:hover svg path {
   stroke: #000;
+}
+@media screen and (max-width: 768px) {
+  #note a.note__btn {
+    width: 200px;
+    font-size: 12px;
+    border-bottom-right-radius: 20px;
+  }
+  #note a.note__btn svg {
+    width: 10px;
+  }
 }
 
 /*-------------------------
@@ -894,6 +1153,15 @@ body.appear footer {
 }
 #topics .container h2 span {
   font-size: clamp(12px, 1.055rem + 0.73vw, 1.6rem);
+}
+@media screen and (max-width: 768px) {
+  #topics .container h2 p {
+    font-size: 30px;
+    text-align: right;
+  }
+  #topics .container h2 span {
+    font-size: 12px;
+  }
 }
 #topics .container .prtimes__rss--list {
   width: 65.94%;

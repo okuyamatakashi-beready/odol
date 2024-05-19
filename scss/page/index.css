@@ -81,9 +81,22 @@ br.pc {
 #header a.logo img {
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  #header a.logo {
+    width: 26%;
+    min-width: 1px;
+    top: 10px;
+    left: 20px;
+  }
+}
 #header .header__toggle {
   width: 22.7%;
   min-width: 210px;
+}
+@media screen and (max-width: 768px) {
+  #header .header__toggle .flex {
+    justify-content: flex-end;
+  }
 }
 #header .header__toggle a.header__toggle--contact {
   background-position: center center;
@@ -108,6 +121,11 @@ br.pc {
   font-size: clamp(12px, 1.018rem + 0.91vw, 1.7rem);
   font-family: "dnp-shuei-gothic-gin-std";
 }
+@media screen and (max-width: 768px) {
+  #header .header__toggle a.header__toggle--contact {
+    display: none;
+  }
+}
 #header .header__toggle #toggle {
   background-color: #000;
   width: 27%;
@@ -115,12 +133,24 @@ br.pc {
   cursor: pointer;
   border-bottom-left-radius: 30px;
 }
+@media screen and (max-width: 768px) {
+  #header .header__toggle #toggle {
+    width: 73px;
+    padding: 9px 0;
+  }
+}
 #header .header__toggle #toggle div {
   position: relative;
   top: 40%;
   height: 23px;
   bottom: 0;
   margin: auto;
+}
+@media screen and (max-width: 768px) {
+  #header .header__toggle #toggle div {
+    top: 35%;
+    right: -3px;
+  }
 }
 #header .header__toggle #toggle div span {
   width: 42%;
@@ -137,6 +167,11 @@ br.pc {
 }
 #header .header__toggle #toggle div span:nth-of-type(2) {
   transform: translateY(15px);
+}
+@media screen and (max-width: 768px) {
+  #header .header__toggle #toggle div span:nth-of-type(2) {
+    transform: translateY(11px);
+  }
 }
 
 /*-------------------------
@@ -399,7 +434,7 @@ body.appear footer {
   }
   .container {
     min-width: 1px;
-    width: 84%;
+    width: 89.3%;
   }
   .order_1 {
     order: 2;

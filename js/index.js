@@ -100,7 +100,7 @@ $(document).ready(function() {
         'direction': 'left',
         'pauseonhover': false,
         'responsive': true,
-        'clone': 100
+        'clone': 2
     });
 });
 

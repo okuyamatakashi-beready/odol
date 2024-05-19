@@ -52,6 +52,7 @@ br.pc {
     width: 100%;
     .flex {
         justify-content: space-between;
+
     }
     a.logo {
         width: 12%;
@@ -62,10 +63,22 @@ br.pc {
         img {
             width: 100%;
         }
+        @media screen and (max-width: 768px) {
+            width: 26%;
+            min-width: 1px;
+            top: 10px;
+            left: 20px;
+        }
     }
     .header__toggle {
         width: 22.7%;
         min-width: 210px;
+        @media screen and (max-width: 768px) {
+            .flex {
+                justify-content: flex-end;
+            }
+            
+        }
         a.header__toggle--contact {
             @include v.bg;
             background-image: url(./../images/common/header_contact-bg.jpg);
@@ -86,7 +99,9 @@ br.pc {
                     font-family:"dnp-shuei-gothic-gin-std";
                 }
             }
-
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
         }
         #toggle {
             background-color: #000;
@@ -94,12 +109,20 @@ br.pc {
             max-width: 120px;
             cursor: pointer;
             border-bottom-left-radius: 30px;
+            @media screen and (max-width: 768px) {
+                width: 73px;
+                padding: 9px 0;
+            }
             div {
                 position: relative;
                 top: 40%;
                 height: 23px;
                 bottom: 0;
                 margin: auto;
+                @media screen and (max-width: 768px) {
+                    top: 35%;
+                    right: -3px;
+                }
                 span {
                     width: 42%;
                     background-color: #fff;
@@ -114,6 +137,9 @@ br.pc {
                     }
                     &:nth-of-type(2) {
                         transform: translateY(15px);
+                        @media screen and (max-width: 768px) {
+                            transform: translateY(11px);
+                        }
                     }
                 }
             }
@@ -394,7 +420,7 @@ body.appear footer{
     .container {
         min-width: 1px;
         
-        width: 84%;
+        width: 89.3%;
     }
     .order_1 {
         order: 2;
