@@ -1,1 +1,103 @@
+@use "./../config/variables" as v;
+@use "./../common" as c;
 
+.vision__wrap {
+    @include v.bg;
+    background-image: url(./../../images/company/vision_bg.jpg);
+    position: relative;
+    padding-top: 11.2rem;
+    padding-bottom: 12rem;
+    img {
+        width: 53.39%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        object-fit: cover;
+        mix-blend-mode: overlay; 
+    }
+    p {
+        color: #fff;
+        text-align: center;
+        position: relative;
+        z-index: 10;
+        span {
+            display: block;
+            font-size: clamp(35px, 2.955rem + 2.73vw, 5rem);
+        }
+        strong {
+            display: block;
+            font-size: clamp(49px, 4.136rem + 3.82vw, 7rem);
+        }
+    }
+}
+
+.company__content {
+    padding-top: 23.6rem;
+    width: 85.93%;
+    margin-left: auto;
+    .flex {
+        align-items: flex-start;
+        .company__content--text {
+            width: 47.515%;
+            .company__content--item {
+                margin-bottom: 14.7rem;
+                span {
+                    display: block;
+                    img {
+                        width: 19.3%;
+                        margin-bottom: 5rem;
+                        &.statement {
+                            width: 23.72%;
+                        }
+                    }
+                }
+                strong {
+                    font-size: clamp(35px, 2.955rem + 2.73vw, 5rem);
+                    font-weight: 500;
+                }
+                p {
+                    font-size: clamp(17px, 1.445rem + 1.27vw, 2.4rem);
+                    line-height: 2;
+                    font-weight: bold;
+                }
+            }
+
+        }
+        .company__content--img {
+            width: 52.48%;
+            figure {
+                img {
+                    width: 100%;
+                }
+                &:nth-of-type(1) {
+                    width: 67.15%;
+                    position: relative;
+                    z-index: 10;
+                }
+                &:nth-of-type(2) {
+                    width: 69.4%;
+                    margin-right: 0;
+                    margin-left: auto;
+                    margin-top: -7rem;
+                }
+            }
+        }
+    }
+}
+
+
+.company__profile {
+    .company__profile--wrap {
+        .flex {
+            .company__profile--thumb {
+                width: 37%;
+                @include v.bg;
+                background-image: url(./../../images/company/company_profile-thumb.jpg);
+                border-top-right-radius: 50px;
+            }
+        }
+    }
+}

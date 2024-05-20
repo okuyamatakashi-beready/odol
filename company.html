@@ -16,6 +16,17 @@
 		<link href="/scss/slick.css" rel="stylesheet" type="text/css">
 		<link rel="icon" href="/images/common/favicon.ico" id="favicon">
 		<link id="page-specific-stylesheet" rel="stylesheet" href="">
+
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+
+		<!-- JS -->
+		<script src="/js/includes.js" defer></script> 
+
+
+
 		<script>
 			document.addEventListener("DOMContentLoaded", function() {
 				var stylesheet = document.getElementById('page-specific-stylesheet');
@@ -33,14 +44,175 @@
 			});
 		</script>
 
+		<script>
+			(function(d) {
+			var config = {
+				kitId: 'tfp0xci',
+				scriptTimeout: 3000,
+				async: true
+			},
+			h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+			})(document);
+		</script>
+
 		
 
 	</head>
 <body>
-	<div include-html="header.html"></div>
+	
+
+	<div class="header_include" include-html="/includes/header.html"></div>
+
 	<main>
-		<p>hogehoge</p>
+
+
+		<div class="page__common">
+			<h1>
+				<p>COMPANY</p>
+				<span>オドルキカクについて</span>
+			</h1>
+		</div>
+
+		<div class="vision__wrap">
+			<p>
+				<span>VISION</span>
+				<strong>オドルキカクで、こころおどる世界へ</strong>
+			</p>
+			<img src="/images/company/company.svg" alt="vision">
+		</div>
+
+		<div class="company__content">
+			<div class="flex">
+				<div class="company__content--text">
+					<div class="company__content--item">
+						<span><img src="/images/company/purpose.svg" alt="PURPOSE"></span>
+						<strong>こころおどる場をつなぐ</strong>
+					</div>
+					<div class="company__content--item">
+						<span><img src="/images/company/statement.svg" alt="STATEMENT" class="statement"></span>
+						<p>
+							人と人が集うことで新たな可能性が生まれる場となる。<br>
+							クリエイティブの力で場にリズムを刻めば、<br>
+							人々の心は楽しく躍り出す。<br>
+							場が新たな「らしさ」を持つことで、<br>
+							人と場のつながりは広く深くなり<br>
+							よりよい社会が実現する。<br>
+							そんな “ プレイスブランディング ” を企画する。<br>
+							今日も、明日も、明後日も。
+						</p>
+					</div>
+				</div>
+
+				<div class="company__content--img">
+					<figure>
+						<img src="/images/company/company_content-img01.jpg" alt="">
+					</figure>
+					<figure>
+						<img src="/images/company/company_content-img02.jpg" alt="">
+					</figure>
+				</div>
+			</div>
+		</div>
+
+		<div class="company__profile">
+			<div class="company__profile--wrap">
+				<div class="flex">
+					<div class="company__profile--thumb"></div>
+
+					<div class="company__profile--content">
+						<h2>
+							<span>COMPANY PROFILE</span>
+							<small>会社情報</small>
+						</h2>
+
+						<dl class="flex">
+							<dt>会社名</dt>
+							<dd>オドルキカク株式会社</dd>
+						</dl>
+						<dl class="flex">
+							<dt>設立</dt>
+							<dd>2021 年 11 月 22 日</dd>
+						</dl>
+						<dl class="flex">
+							<dt>資本金</dt>
+							<dd>3,000,000</dd>
+						</dl>
+						<dl class="flex">
+							<dt>事業内容</dt>
+							<dd>クライアントや社会の課題を解決するためにブランディング、マーケティング、コミュニケーションの企画を立案し、課題解決に向けた場づくりなどを実行していきます。</dd>
+						</dl>
+						<dl class="flex">
+							<dt>主な取引先</dt>
+							<dd>
+								カワボウ株式会社（マーサ21ショッピングセンター）<br>
+								株式会社広和（Hisaya-odori Park）<br>
+								株式会社電通<br>
+								ライオン株式会社<br>
+								※順不同（令和6年6月現在）
+							</dd>
+						</dl>
+						<dl class="flex">
+							<dt>代表者</dt>
+							<dd>
+								代表取締役　前田 泰伸
+								<figure>
+									<img src="/images/company/ceo.jpg" alt="">
+								</figure>
+							</dd>
+						</dl>
+						<dl class="flex">
+							<dt>所在地</dt>
+							<dd>
+								・本社<br>
+								〒502-0904 岐阜県岐阜市島栄町 2-24<br>
+								・岐阜オフィス<br>
+								〒502-0932 岐阜県岐阜市則武中 2-25-10-201<br>
+								・名古屋オフィス<br>
+								〒451–0045 愛知県名古屋市西区名駅 2-29-3-805 
+							</dd>
+						</dl>
+					</div>
+				</div>
+
+				<a href="/" class="back">
+					<div class="flex">
+						<img src="/images/company/back-icon.svg" alt="">
+						<span>BACK</span>
+					</div>
+				</a>
+			</div>
+		</div>
+
 	</main>
+
+	<footer id="footer">
+		<a href="/" class="footer__logo">
+			<img src="/images/common/footer_logo.svg" alt="">
+		</a>
+		<ul class="flex">
+			<li>
+				<a href="https://www.instagram.com/odol_inc/" target="_blank">
+					<img src="/images/common/instagram.svg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="https://twitter.com/odol_maeda/status/1774696072981762374" target="_blank">
+					<img src="/images/common/X_twitter.svg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="https://www.youtube.com/channel/UCXym1wusPhFkmp0TghhfcvQ" target="_blank">
+					<img src="/images/common/youtube_logo.svg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="https://note.com/odolkikaku/" target="_blank">
+					<img src="/images/common/note_icon.svg" alt="">
+				</a>
+			</li>
+		</ul>
+		<small class="copy sp">Copyright ©︎ ODOL KIKAKU Corporation. All Rights Reserved.</small>
+	</footer>
 	
 
 </body>
@@ -48,7 +220,16 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
 <script src="/js/infiniteslidev2.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
-<script src="/js/index.js"></script>
+
+
+<script>
+function loadPageScript() {
+	var script = document.createElement('script');
+	script.src = '/js/index.js';
+	document.body.appendChild(script);
+}
+</script>
 </html>
