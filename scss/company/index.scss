@@ -7,6 +7,10 @@
     position: relative;
     padding-top: 11.2rem;
     padding-bottom: 12rem;
+    @media screen and (max-width: 768px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
     img {
         width: 53.39%;
         position: absolute;
@@ -17,6 +21,9 @@
         margin: auto;
         object-fit: cover;
         mix-blend-mode: overlay; 
+        @media screen and (max-width: 768px) {
+            width: 89.3%;
+        }
     }
     p {
         color: #fff;
@@ -26,10 +33,17 @@
         span {
             display: block;
             font-size: clamp(35px, 2.955rem + 2.73vw, 5rem);
+            font-family: 'brandon';
+            @media screen and (max-width: 768px) {
+                font-size: 20px;
+            }
         }
         strong {
             display: block;
             font-size: clamp(49px, 4.136rem + 3.82vw, 7rem);
+            @media screen and (max-width: 768px) {
+                font-size: 30px;
+            }
         }
     }
 }
@@ -38,36 +52,65 @@
     padding-top: 23.6rem;
     width: 85.93%;
     margin-left: auto;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        padding-top: 58px;
+        padding-bottom: 100px;
+    }
     .flex {
         align-items: flex-start;
         .company__content--text {
             width: 47.515%;
+            @media screen and (max-width: 768px) {
+                width: 89.3%;
+                margin: auto;
+            }
             .company__content--item {
                 margin-bottom: 14.7rem;
+                @media screen and (max-width: 768px) {
+                    margin-bottom: 50px;
+                }
                 span {
                     display: block;
                     img {
                         width: 19.3%;
                         margin-bottom: 5rem;
+                        @media screen and (max-width: 768px) {
+                            width: 90px;
+                            margin-bottom: 20px;
+                        }
                         &.statement {
                             width: 23.72%;
+                            @media screen and (max-width: 768px) {
+                                width: 111px;
+                            }
                         }
                     }
                 }
                 strong {
                     font-size: clamp(35px, 2.955rem + 2.73vw, 5rem);
                     font-weight: 500;
+                    @media screen and (max-width: 768px) {
+                        font-size: 20px;
+                    }
                 }
                 p {
                     font-size: clamp(17px, 1.445rem + 1.27vw, 2.4rem);
                     line-height: 2;
                     font-weight: bold;
+                    @media screen and (max-width: 768px) {
+                        font-size: 14px;
+                        line-height: 2.28;
+                    }
                 }
             }
 
         }
         .company__content--img {
             width: 52.48%;
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
             figure {
                 img {
                     width: 100%;
@@ -76,27 +119,149 @@
                     width: 67.15%;
                     position: relative;
                     z-index: 10;
+                    @media screen and (max-width: 768px) {
+                        width: 94.66%;
+                        margin-right: auto;
+                    }
                 }
                 &:nth-of-type(2) {
                     width: 69.4%;
                     margin-right: 0;
                     margin-left: auto;
                     margin-top: -7rem;
+                    @media screen and (max-width: 768px) {
+                        width: 94.66%;
+                        margin-left: auto;
+                        margin-top: -30px;
+                    }
                 }
             }
         }
     }
 }
 
-
 .company__profile {
+    padding-bottom: 22.6rem;
+    @media screen and (max-width: 768px) {
+        padding-bottom: 100px;
+    }
     .company__profile--wrap {
+        width: 85.93%;
+        margin-right: auto;
+        margin-bottom: 16rem;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
         .flex {
+            align-items: flex-start;
             .company__profile--thumb {
                 width: 37%;
                 @include v.bg;
                 background-image: url(./../../images/company/company_profile-thumb.jpg);
                 border-top-right-radius: 50px;
+                border-bottom-right-radius: 50px;
+                padding-top: 40.6%;
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                    padding-top: 0;
+                    height: 200px;
+                    margin-bottom: 45px;
+                }
+            }
+            .company__profile--content {
+                width: 56.78%;
+                @media screen and (max-width: 768px) {
+                    width: 89.3%;
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+                h2 {
+                    border-bottom: 1px solid #000;
+                    justify-content: flex-start;
+                    align-items: center;
+                    padding-bottom: 3rem;
+                    margin-bottom: 4.4rem;
+                    @media screen and (max-width: 768px) {
+                        flex-wrap: wrap;
+                        border-bottom: 0;
+                        margin-bottom: 50px;
+                    }
+                    span {
+                        font-size: clamp(35px, 2.955rem + 2.73vw, 5rem);
+                        font-weight: 500;
+                        display: inline-block;
+                        font-family: "Montserrat";
+                        margin-right: 2rem;
+                        @media screen and (max-width: 768px) {
+                            font-size: 20px;
+                            display: block;
+                            width: 100%;
+                            margin-bottom: 8px;
+                        }
+                    }
+                    small {
+                        font-size: clamp(12px, 0.064rem + 0.06vw, 0.106rem);
+                        @media screen and (max-width: 768px) {
+                            font-size: 12px;
+                            font-weight: normal;
+                        }
+                    }
+                }
+                dl {
+                    margin-bottom: 4rem;
+                    font-size: clamp(17px, 0.09rem + 0.08vw, 0.15rem);
+                    @media screen and (max-width: 768px) {
+                        font-size: 12px;
+                        margin-bottom: 36px;
+                    }
+                    dt {
+                        width: 16.75%;
+                        @media screen and (max-width: 768px) {
+                            width: 23.88%;
+                            font-weight: bold;
+                        }
+                    }
+                    dd {
+                        width: 77.48%;
+                        line-height: 1.66em;
+                        font-weight: bold;
+                        @media screen and (max-width: 768px) {
+                            width: 72.53%;
+                            line-height: 2;
+                        }
+                        figure {
+                            margin-top: 3rem;
+                            width: 60%;
+                            @media screen and (max-width: 768px) {
+                                display: none;
+                            }
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    a.back {
+        text-align: center;
+        font-family: "Montserrat";
+        font-size: clamp(17px, 0.09rem + 0.08vw, 0.15rem);
+        color: #000;
+        
+        .flex {
+            justify-content: center;
+            span {
+                margin-left: 2rem;
+            }
+            img {
+                width: 1.56%;
+                @media screen and (max-width: 768px) {
+                    width: 30px;
+                }
             }
         }
     }

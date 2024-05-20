@@ -65,11 +65,16 @@ requestAnimationFrame(raf);
 /*-------------------------
 matchheight
 -------------------------*/
-$(function() {
-	$('#toggle').matchHeight({
-        target: $('.header__toggle--contact')
+
+
+if(!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
+    $(function() {
+        $('#toggle').matchHeight({
+            target: $('.header__toggle--contact')
+        });
     });
-});
+}
+
 $(function() {
 	$('.note__inner').matchHeight();
 });
@@ -109,21 +114,26 @@ $(document).ready(function() {
     ローディング
 -------------------------*/
 
-$(window).on('load',function(){
-    $("#splash-logo").delay(1200).fadeOut('slow');//ロゴを1.2秒でフェードアウトする記述
-    
-    //=====ここからローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
-    $("#splash").delay(1500).fadeOut('slow',function(){//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
-    
-    $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
-    
+$(document).ready(function() {
+    // ロゴを1.2秒でフェードアウトする
+    $("#splash-logo").delay(1200).fadeOut('slow').promise().done(function() {
+        // ロゴのフェードアウトが完了したら、スプラッシュエリアをフェードアウト
+        $("#splash").fadeOut('slow', function() {
+            $('body').addClass('appear');
+        });
     });
-    //=====ここまでローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
-    
-    //=====ここから背景が伸びた後に動かしたいJSをまとめたい場合は
+
+    // フェードアウトが完了しない場合のフォールバック処理
+    setTimeout(function() {
+        if ($("#splash").is(':visible')) {
+            $("#splash").fadeOut('slow', function() {
+                $('body').addClass('appear');
+            });
+        }
+    }, 5000); // 5秒後にフォールバック処理を実行
+
+    // 背景が伸びた後に動かしたいJSをまとめる
     $('.splashbg1').on('animationend', function() { 
-    //この中に動かしたいJSを記載
+        // この中に動かしたいJSを記載
     });
-    //=====ここまで背景が伸びた後に動かしたいJSをまとめる
-    
-    });
+});

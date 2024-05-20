@@ -102,7 +102,7 @@ br.pc {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(./../images/common/header_contact-bg.jpg);
+  background-image: url(/images/common/header_contact-bg.jpg);
   width: 60%;
   padding: 2rem 0;
   color: #fff;
@@ -136,7 +136,7 @@ br.pc {
 @media screen and (max-width: 768px) {
   #header .header__toggle #toggle {
     width: 73px;
-    padding: 9px 0;
+    padding: 25px 0;
   }
 }
 #header .header__toggle #toggle div {
@@ -148,7 +148,7 @@ br.pc {
 }
 @media screen and (max-width: 768px) {
   #header .header__toggle #toggle div {
-    top: 35%;
+    top: 4px;
     right: -3px;
   }
 }
@@ -283,7 +283,7 @@ br.pc {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(./../images/common/gnav_common_bg.jpg);
+  background-image: url(/images/common/gnav_common_bg.jpg);
   border-radius: 20px;
   display: block;
   padding: 2.3rem 0 2rem 0;
@@ -508,7 +508,7 @@ body.appear footer {
   .slick-next {
     width: 30px;
     height: 30px;
-    background-image: url(../images/common/point_next.svg) !important;
+    background-image: url(/images/common/point_next.svg) !important;
     background-size: contain;
   }
   .slick-next:before {
@@ -517,7 +517,7 @@ body.appear footer {
   .slick-prev {
     width: 30px;
     height: 30px;
-    background-image: url(../images/common/point_prev.svg) !important;
+    background-image: url(/images/common/point_prev.svg) !important;
     background-size: contain;
   }
   .slick-prev:before {
@@ -533,6 +533,12 @@ body.appear footer {
   padding-top: 21rem;
   padding-bottom: 19rem;
 }
+@media screen and (max-width: 768px) {
+  .page__common {
+    padding-top: 140px;
+    padding-bottom: 35px;
+  }
+}
 .page__common::before {
   content: "";
   width: 2px;
@@ -545,6 +551,12 @@ body.appear footer {
   margin: auto;
   position: absolute;
 }
+@media screen and (max-width: 768px) {
+  .page__common::before {
+    height: 120px;
+    width: 1px;
+  }
+}
 .page__common h1 {
   text-align: center;
 }
@@ -553,9 +565,19 @@ body.appear footer {
   font-family: "Montserrat";
   font-weight: 500;
 }
+@media screen and (max-width: 768px) {
+  .page__common h1 p {
+    font-size: 30px;
+  }
+}
 .page__common h1 span {
   display: block;
   font-size: clamp(13px, 1.118rem + 0.91vw, 1.8rem);
+}
+@media screen and (max-width: 768px) {
+  .page__common h1 span {
+    font-size: 12px;
+  }
 }
 
 /*-------------------------
@@ -567,7 +589,7 @@ body.appear footer {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(./../images/common/footer_bg.jpg);
+  background-image: url(/images/common/footer_bg.jpg);
 }
 #footer a.footer__logo {
   width: 17%;
@@ -602,7 +624,7 @@ body.appear footer {
   #footer {
     padding-top: 110px;
     padding-bottom: 60px;
-    background-image: url(./../images/common/footer_bg_sp.jpg);
+    background-image: url(/images/common/footer_bg_sp.jpg);
   }
   #footer a.footer__logo {
     width: 213px;

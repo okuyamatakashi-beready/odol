@@ -81,7 +81,7 @@ br.pc {
         }
         a.header__toggle--contact {
             @include v.bg;
-            background-image: url(./../images/common/header_contact-bg.jpg);
+            background-image: url(/images/common/header_contact-bg.jpg);
             width: 60%;
             padding: 2rem 0;
             color: #fff;
@@ -111,7 +111,7 @@ br.pc {
             border-bottom-left-radius: 30px;
             @media screen and (max-width: 768px) {
                 width: 73px;
-                padding: 9px 0;
+                padding: 25px 0;
             }
             div {
                 position: relative;
@@ -120,7 +120,7 @@ br.pc {
                 bottom: 0;
                 margin: auto;
                 @media screen and (max-width: 768px) {
-                    top: 35%;
+                    top: 4px;
                     right: -3px;
                 }
                 span {
@@ -249,7 +249,7 @@ br.pc {
         a.gnav__contact--btn {
             width: 80%;
             @include v.bg;
-            background-image: url(./../images/common/gnav_common_bg.jpg);
+            background-image: url(/images/common/gnav_common_bg.jpg);
             border-radius: 20px;
             display: block;
             padding: 2.3rem 0 2rem 0;
@@ -483,7 +483,7 @@ body.appear footer{
     .slick-next {
         width: 30px;
         height: 30px;
-        background-image: url(../images/common/point_next.svg)!important;
+        background-image: url(/images/common/point_next.svg)!important;
         background-size: contain;
     }
     .slick-next:before {
@@ -493,7 +493,7 @@ body.appear footer{
     .slick-prev {
         width: 30px;
         height: 30px;
-        background-image: url(../images/common/point_prev.svg)!important;
+        background-image: url(/images/common/point_prev.svg)!important;
         background-size: contain;
     }
     .slick-prev:before {
@@ -511,6 +511,10 @@ body.appear footer{
     position: relative;
     padding-top: 21rem;
     padding-bottom: 19rem;
+    @media screen and (max-width: 768px) {
+        padding-top: 140px;
+        padding-bottom: 35px;
+    }
     &::before {
         content: "";
         width: 2px;
@@ -522,6 +526,10 @@ body.appear footer{
         top: 0;
         margin: auto;
         position: absolute;
+        @media screen and (max-width: 768px) {
+            height: 120px;
+            width: 1px;
+        }
     }
     h1 {
         text-align: center;
@@ -529,10 +537,16 @@ body.appear footer{
             font-size: clamp(49px, 4.136rem + 3.82vw, 7rem);
             font-family: "Montserrat";
             font-weight: 500;
+            @media screen and (max-width: 768px) {
+                font-size: 30px;
+            }
         }
         span {
             display: block;
             font-size: clamp(13px, 1.118rem + 0.91vw, 1.8rem);
+            @media screen and (max-width: 768px) {
+                font-size: 12px;
+            }
         }
     }
 }
@@ -545,7 +559,7 @@ body.appear footer{
     padding-top: 10rem;
     padding-bottom: 6.5rem;
     @include v.bg;
-    background-image: url(./../images/common/footer_bg.jpg);
+    background-image: url(/images/common/footer_bg.jpg);
     a.footer__logo {
         width: 17%;
         display: block;
@@ -580,7 +594,7 @@ body.appear footer{
     @media screen and (max-width: 768px) {
         padding-top: 110px;
         padding-bottom: 60px;
-        background-image: url(./../images/common/footer_bg_sp.jpg);
+        background-image: url(/images/common/footer_bg_sp.jpg);
         a.footer__logo {
             width: 213px;
             margin-bottom: 25px;
