@@ -112,7 +112,7 @@ br.pc {
 }
 #header .header__toggle a.header__toggle--contact p {
   text-align: center;
-  font-size: clamp(20px, 1.273rem + 3.64vw, 4rem);
+  font-size: clamp(20px, 1.273rem + 3.64vw, 40px);
   font-family: "brandon";
 }
 #header .header__toggle a.header__toggle--contact p span {
